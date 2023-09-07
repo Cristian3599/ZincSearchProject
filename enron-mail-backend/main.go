@@ -11,7 +11,8 @@ import (
 	"net/http"
 	"strings"
 
-	"enron-email-dataset.go/models"
+	"enronmailbackend/models"
+
 	"github.com/go-chi/chi"
 	"github.com/go-chi/cors"
 	"github.com/go-chi/render"
