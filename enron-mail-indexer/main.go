@@ -9,6 +9,7 @@ import (
 	"io"
 	"net/http"
 	"os"
+	"path/filepath"
 	"runtime/pprof"
 	"strings"
 	"sync"
@@ -209,7 +210,15 @@ func main() {
 		f.Close()
 	}()
 
-	data, err := os.ReadFile("C:/Users/Hewlett-Packard/Downloads/enron_mail_20110402.tgz")
+	exePath, err := os.Executable()
+	if err != nil {
+		fmt.Println("Failed to get executable path:", err)
+		return
+	}
+
+	exeDir := filepath.Dir(exePath)
+
+	data, err := os.ReadFile(exeDir + "/enron_mail_20110402.tgz")
 	if err != nil {
 		fmt.Println("WASM :: ERROR: ", err)
 	}
