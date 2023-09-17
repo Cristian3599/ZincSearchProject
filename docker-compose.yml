@@ -24,7 +24,7 @@ services:
   frontend:
     build: ./enron-mail-frontend
     links:
-      - back
+      - backend
     ports:
       - "8081"
 volumes:
