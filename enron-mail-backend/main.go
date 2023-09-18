@@ -38,7 +38,6 @@ func main() {
 		MaxAge:           300,
 	}))
 
-	// Manejador para obtener un producto por ID desde Zincsearch
 	router.Get("/emails", func(w http.ResponseWriter, r *http.Request) {
 		queryResponse, err := getAllEmails()
 		if err != nil {
@@ -56,7 +55,7 @@ func main() {
 	})
 	//router.Get("/email/{id}", getEmail)
 
-	// Escucha las conexiones en el puerto 8080
+	// Escucha las conexiones en el puerto 3000
 	log.Println("listening on port 3000")
 	http.ListenAndServe(":3000", router)
 }

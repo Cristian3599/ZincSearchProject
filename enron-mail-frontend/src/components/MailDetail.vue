@@ -76,5 +76,3 @@ defineEmits(['backToList'])
     <p class="whitespace-pre-wrap pl-4">{{ body }}</p>
   </div>
 </template>
-
-dddd, mmmm dd, aaaaa

@@ -7,6 +7,6 @@ RUN apt-get update && apt-get install -y wget && \
 
 COPY . .
 
-RUN go main.go
+RUN go build main.go
 
 CMD ["./main"]
